@@ -1,0 +1,8 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 32px;
+  background-color: tomato;
+}
