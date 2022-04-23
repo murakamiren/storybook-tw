@@ -1,4 +1,5 @@
 import { FC } from "react"
+import "./button.css"
 
 type ButtonProps = {
   text: string
