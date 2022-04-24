@@ -20,7 +20,24 @@ module.exports = {
     project: "./tsconfig.json",
     sourceType: "module"
   },
-  plugins: ["react", "react-hooks", "@typescript-eslint", "jest"],
+  plugins: [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "jest",
+    "jest-dom",
+    "testing-library"
+  ],
+  overrides: [
+    {
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: [
+        "plugin:jest/recommended",
+        "plugin:jest-dom/recommended",
+        "plugin:jest-dom/recommended"
+      ]
+    }
+  ],
   rules: {
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -28,7 +45,13 @@ module.exports = {
     "import/no-extraneous-dependencies": [
       "error",
       {
-        devDependencies: ["**/*.stories.tsx", "./vite.config.ts"],
+        devDependencies: [
+          "**/*.stories.tsx",
+          "./vite.config.ts",
+          "./src/tests/*.ts",
+          "./src/tests/*.tsx",
+          "./jest.setup.ts"
+        ],
         optionalDependencies: false
       }
     ],

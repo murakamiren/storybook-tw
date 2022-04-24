@@ -7,7 +7,15 @@ module.exports = {
       tsconfig: "tsconfig.json"
     }
   },
+  testMatch: [
+    "**/__tests__/**/*.+(ts|tsx|js)",
+    "**/?(*.)+(spec|test).+(ts|tsx|js)"
+  ],
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
   preset: "ts-jest",
-  testEnvironment: "node",
-  roots: ["./src/tests"]
+  testEnvironment: "jsdom",
+  roots: ["./src/tests"],
+  setupFilesAfterEnv: ["./jest.setup.ts"]
 }
