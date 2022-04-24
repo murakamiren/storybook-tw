@@ -21,7 +21,9 @@
     "./.eslintrc.js",
     "./vite.config.ts",
     "./jest.config.js",
-    "./jest.setup.ts"
+    "./jest.setup.ts",
+    "./__mocks__/fileMock.js",
+    "./__mocks__/styleMock.js"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
