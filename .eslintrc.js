@@ -20,7 +20,7 @@ module.exports = {
     project: "./tsconfig.json",
     sourceType: "module"
   },
-  plugins: ["react", "react-hooks", "@typescript-eslint"],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "jest"],
   rules: {
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -28,7 +28,7 @@ module.exports = {
     "import/no-extraneous-dependencies": [
       "error",
       {
-        devDependencies: ["**/*.stories.tsx"],
+        devDependencies: ["**/*.stories.tsx", "./vite.config.ts"],
         optionalDependencies: false
       }
     ],
