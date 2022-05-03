@@ -23,7 +23,9 @@
     "./jest.config.js",
     "./jest.setup.ts",
     "./__mocks__/fileMock.js",
-    "./__mocks__/styleMock.js"
+    "./__mocks__/styleMock.js",
+    "./tailwind.config.js",
+    "./postcss.config.js"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

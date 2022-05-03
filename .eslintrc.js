@@ -9,7 +9,8 @@ module.exports = {
     "airbnb",
     "airbnb-typescript",
     "prettier",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:tailwindcss/recommended"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -26,7 +27,8 @@ module.exports = {
     "@typescript-eslint",
     "jest",
     "jest-dom",
-    "testing-library"
+    "testing-library",
+    "tailwindcss"
   ],
   overrides: [
     {
@@ -42,6 +44,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/require-default-props": 0,
     "import/no-extraneous-dependencies": [
       "error",
       {
